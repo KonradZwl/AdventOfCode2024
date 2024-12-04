@@ -1,16 +1,19 @@
-﻿# This is a sample Python script.
+﻿import time
+from day1.day1 import process_input, process_input2
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+with open('input.txt', 'r', encoding='utf-8-sig') as file:
+    lines = file.readlines()
 
+# First part
+start_time = time.perf_counter()
+process_input(lines)
+end_time = time.perf_counter()
+execution_time_ms = (end_time - start_time) * 1000
+print(f"Execution time: {execution_time_ms:.3f} ms")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#Second part
+start_time = time.perf_counter()
+process_input2(lines)
+end_time = time.perf_counter()
+execution_time_ms = (end_time - start_time) * 1000
+print(f"Execution time: {execution_time_ms:.3f} ms")
