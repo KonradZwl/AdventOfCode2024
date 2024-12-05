@@ -1,5 +1,6 @@
 ﻿import time
-from day1.day1 import process_input, process_input2
+from day2.part1.sol import process_input
+from day2.part2.sol import process_input2
 
 with open('input.txt', 'r', encoding='utf-8-sig') as file:
     lines = file.readlines()
